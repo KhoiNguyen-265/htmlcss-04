@@ -885,3 +885,176 @@ a {
     font-weight: 500;
     border-color: rgb(255, 91, 46, 0.6);
 }
+
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+
+.pricing__container {
+    width: 994px;
+}
+
+.pricing__heading,
+.pricing__desc {
+    text-align: center;
+}
+
+.pricing__desc {
+    margin: 24px auto 0;
+    max-width: 709px;
+}
+
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.pricing__inner {
+    position: relative;
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 276px;
+    height: 56px;
+    border-radius: 99px;
+    border: 1px solid rgb(255, 91, 46, 0.6);
+    user-select: none;
+    cursor: pointer;
+}
+
+.pricing__switch-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 142px;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary-color);
+    transition: transform, left, width;
+    transition-duration: 0.4s;
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    left: 100%;
+    transform: translateX(-100%);
+    width: 131px;
+}
+
+.pricing__switch-input:not(:checked)
+    + .pricing__switch-label
+    .pricing__switch-value:last-child,
+.pricing__switch-input:checked
+    + .pricing__switch-label
+    .pricing__switch-value:first-child {
+    color: var(--primary-color);
+}
+
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+}
+
+.pricing__sale {
+    position: absolute;
+    right: -110px;
+    top: -10px;
+}
+
+.pricing__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 44px;
+    margin-top: 58px;
+}
+
+.pricing-item {
+    padding: 30px 28px 43px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.pricing-item__type {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__title {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__price {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--second-color);
+    font-family: Sora;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03; /* 103.03% */
+}
+
+.pricing-item__btn {
+    --height: 44px;
+
+    display: inline-block;
+    line-height: var(--height);
+    border-radius: 99px;
+    margin-top: 22px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+}
+
+.pricing-item__btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    display: flex;
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__item::before {
+    content: url(../icon/price-check.svg);
+    margin-right: 12px;
+}
+
+.pricing-item:nth-child(1) .pricing-item__item:nth-child(5)::before,
+.pricing-item:nth-child(1) .pricing-item__item:nth-child(6)::before,
+.pricing-item:nth-child(1) .pricing-item__item:nth-child(7)::before,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(5)::before,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(6)::before,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(7)::before {
+    opacity: 0.4;
+}
