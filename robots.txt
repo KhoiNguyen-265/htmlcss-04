@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://khoinguyen-265.github.io/htmlcss-04/sitemap.xml
